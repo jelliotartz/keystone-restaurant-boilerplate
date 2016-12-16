@@ -1,0 +1,22 @@
+<a name="upcoming-events"></a>
+<section
+  style="background-image: url({{cloudinaryUrl config.upcomingEventsImage}})"
+  class="UpcomingEvents Section Section-bg">
+  <div class="container">
+    <div class="row">
+
+      {{#each upcomingEvents}}
+        <div class="col-sm-4">
+          <figure class='Event'>
+            <img class='Event-image' src='{{cloudinaryUrl image}}' alt='{{name}}' />
+            <figcaption class='Event-caption'>
+              <span class='Event-name'>{{name}}</span>
+              <!-- <span class='Event-details'>Event Details Go here Lorem ipsum text</span> -->
+            </figcaption>
+          </figure>
+        </div>
+      {{/each}}
+
+    </div>
+  </div>
+</section>

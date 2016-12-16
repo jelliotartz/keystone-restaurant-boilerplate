@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{{config.name}}</title>
+	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet" type="text/css" />
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:100,400|Roboto+Slab:400,700' rel='stylesheet' type='text/css' />
+	<link href="/styles/site.css" rel="stylesheet"> {{{isAdminEditorCSS user}}}
+</head>
+
+<body>
+	{{{body}}}
+	<script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+	<script>
+		window.ga = function() {
+			ga.q.push(arguments)
+		};
+		ga.q = [];
+		ga.l = +new Date;
+		ga('create', '{{config.googleAnalyticsId}}', 'auto');
+		ga('send', 'pageview')
+	</script>
+	<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+	<script>
+		$(function() {
+			$('a[href*="#"]:not([href="#"])').click(function() {
+				if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+					var target = $(this.hash);
+					target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+					if (target.length) {
+						$('html, body').animate({
+							scrollTop: target.offset().top
+						}, 1000);
+						return false;
+					}
+				}
+			});
+		});
+	</script>
+	<script>
+		var $form = $('.js-form');
+		var $formSuccess = $('.js-formSuccess');
+		var $formError = $('.js-formError');
+		var $submitBtn = $('.js-submitBtn');
+		var url = $form.attr('action');
+
+		var success = function(data) {
+			$form[0].reset();
+			$formSuccess.removeClass('u-isHidden')
+			$submitBtn.prop('disabled', false);
+		}
+
+		var error = function(error) {
+			$formError.removeClass('u-isHidden')
+			$submitBtn.prop('disabled', false);
+		}
+
+		$form.on('submit', function(evt) {
+			var data = $(this).serializeArray()
+			evt.preventDefault();
+			$submitBtn.prop('disabled', true);
+
+			$.ajax({
+				type: "POST",
+				url: url,
+				data: data,
+				success: success,
+				error: error,
+				dataType: 'json'
+			});
+		});
+	</script>
+	<script>
+		$(document).ready(function() {
+			$('.popup-gallery').magnificPopup({
+				delegate: 'a',
+				type: 'image',
+				tLoading: 'Loading image #%curr%...',
+				mainClass: 'mfp-img-mobile',
+				gallery: {
+					enabled: true,
+					navigateByImgClick: true,
+					preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+				},
+				image: {
+					tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+					// titleSrc: function(item) {
+					// 	return null
+					// }
+				}
+			});
+		});
+	</script>
+
+	{{{isAdminEditorJS user}}}
+</body>
+
+</html>

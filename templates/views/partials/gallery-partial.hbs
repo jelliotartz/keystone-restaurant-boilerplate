@@ -1,0 +1,22 @@
+<a name="gallery"></a>
+{{> global/bg-image-partial class="Section-bg--gallery" image=config.galleryImage}}
+<section class="Section Section-bg Section-bg--gallery">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-10 col-sm-offset-1">
+				{{> global/section-header-partial title=config.galleryHeader}}
+				{{#if config.galleryText}}
+					<p class="Section-lead">{{config.galleryText}}</p>
+				{{/if}}
+				<ul class="Gallery popup-gallery">
+					{{#each photoGalleries.images}}
+						<li class="Gallery-item">
+							<a class="Gallery-link popup-gallery-link" href="{{{cloudinaryUrl this width='1200' crop='fill' fetch_format='auto' quality='80' gravity='center'}}}" title="Image of BBQ food at Barn and Company">
+								<img class="img-responsive block-center" src="{{{cloudinaryUrl this width='302' height='256' crop='fill' gravity='center' fetch_format='auto' quality='90'}}}" alt="Photo of the space" />
+							</a>
+						</li>
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+</section>

@@ -1,0 +1,45 @@
+.popup-gallery-link {
+  opacity: 0.9;
+  transition: opacity 100ms ease-in-out;
+
+  &:hover {
+    opacity: 1
+  }
+}
+
+.Gallery {
+  list-style: none;
+  padding: 0;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+
+.Gallery-item {
+  width: 302px;
+  height: 256px;
+
+  border: 4px solid hsl(30, 30%, 22%);
+  border-radius: 3px;
+  margin: 15px auto;
+  @media (min-width: 768px) {
+    margin: 3px 1px;
+    width: 290px;
+    height: 247px;
+  }
+
+  @media (min-width: 992px) {
+    width: 310px;
+    height: 264px;
+  }
+}
+
+.Gallery-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

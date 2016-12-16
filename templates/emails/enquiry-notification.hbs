@@ -1,0 +1,21 @@
+<h1>Reservation Request</h1>
+<ul>
+	<li>Name: {{enquiry.name}}</li>
+	<li>Email: {{enquiry.email}}</li>
+	<li>Phone: {{enquiry.phone}}</li>
+	<li>Date: {{enquiry.date}}</li>
+	<li>Start Time: {{enquiry.startTime}}</li>
+	<li>End Time: {{enquiry.endTime}}</li>
+	{{#if enquiry.numGuests}}
+		<li>Number of Guests: {{enquiry.numGuests}}</li>
+	{{/if}}
+	{{#if enquiry.company}}
+		<li>Company: {{enquiry.company}}</li>
+	{{/if}}
+	<li>Event Type: {{enquiry.eventType}}</li>
+	<li>Package Request: {{enquiry.packageRequest}}</li>
+	{{#if enquiry.notes}}
+		<li>Notes: {{enquiry.notes}}</li>
+	{{/if}}
+	<li>Request was sent: {{enquiry.createdAt}}</li>
+</ul>

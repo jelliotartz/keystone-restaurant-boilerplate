@@ -1,0 +1,52 @@
+.Hero {
+	height: 800px;
+	height: 100vh;
+	background-image: url("/images/hero-image.jpg");
+}
+
+.Hero-logo {
+	position : absolute;
+    width: 240px;
+    top: 27%;
+    bottom: 30%;
+    left: 0;
+    right: 0;
+	margin   : auto;
+
+	@media (min-width: 768px) {
+		width: 400px;
+	}
+}
+
+.Logo {
+	margin : 0 auto;
+}
+
+.Hero-contact {
+	font-weight    : 100;
+	letter-spacing : 1px;
+	position       : absolute;
+	bottom         : 60px;
+    left: 10%;
+    right: 10%;
+    margin: auto;
+	text-align     : center;
+	text-transform : uppercase;
+
+	@include font-smoothing(on);
+
+    @media (min-width: 992px) {
+      bottom: 120px;
+    }
+}
+
+.HeroArrow {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+
+    @media (min-width: 992px) {
+      bottom: 70px;
+    }
+}

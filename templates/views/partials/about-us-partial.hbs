@@ -1,0 +1,39 @@
+<a name="about-us"></a>
+{{> global/bg-image-partial class="Section-bg--aboutUs" image=config.aboutUsImage}}
+<section
+  class="Section Section-bg Section-bg--aboutUs">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 AboutUs-section">
+        {{> global/section-header-partial title='Contact Us'}}
+        {{> global/address-partial}}
+      </div>
+      <div class="col-sm-6 AboutUs-section">
+        {{> global/section-header-partial title='Hours'}}
+          <ul class="Hours-container list-unstyled">
+            {{#each hours}}
+              <li class="Hours-item">
+                <span class="Hour-text">{{dayOfWeek}}</span>
+                <span class="Hour-text"> {{open}} - {{close}}</span>
+              </li>
+            {{/each}}
+          </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 AboutUs-section">
+        {{> global/section-header-partial title=config.aboutUsHeader}}
+        {{#if config.aboutUsText}}
+          <p class="Section-lead">{{config.aboutUsText}}</p>
+          <br />
+        {{/if}}
+      </div>
+      <div class="col-sm-6 AboutUs-section">
+        {{> global/section-header-partial title='Watch Our Video'}}
+        <div class="embed-container">
+          <iframe src="{{config.experienceVideoUrl}}" frameborder=0 allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,93 @@
+$fontColor   : $colorWhite;
+$borderColor : $colorWhite;
+
+.Navigation {
+  background: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: 768px) {
+    font-size: 1em;
+    margin-top: 60px;
+    position: absolute;
+    background: transparent;
+  }
+}
+
+.Navigation-container {
+  width: 100%;
+  margin: 50px 10px 0;
+  padding: 0;
+
+  @media (max-width: 768px) {
+    visibility: hidden;
+    height: 0;
+  }
+
+  @media (min-width: 768px) {
+  }
+}
+
+.Navigation-container--open {
+  visibility: visible;
+  height: 100vh;
+}
+
+.Navigation-icon {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 56px;
+  height: 56px;
+  padding: 10px;
+  display: inline-block;
+
+  @media (min-width: 768px) {
+  display: none;
+  }
+}
+
+.Navigation-item {
+  padding: $navSpacing;
+  background: #151515;
+  display: block;
+  margin-bottom: 5px;
+
+  @media (min-width: 768px) {
+    &:not(:last-child) {
+      border-right: 1px solid $borderColor;
+    }
+    background: transparent;
+    display: inline;
+  }
+}
+
+.Navigation-link {
+  display        : block;
+  font-family    : $navFontFamily;
+  font-weight    : $navFontWeight;
+  font-size      : $navFontSize;
+  color          : $navFontColor;
+  line-height    : $navLineHeight;
+  text-transform : uppercase;
+  padding        : $navPadding;
+  transition     : color 100ms ease-in-out;
+
+  @include font-smoothing(on);
+
+  &:hover {
+    text-decoration : none;
+    color           : $navFontHoverColor;
+  }
+
+  @media (min-width: 768px) {
+    display: inline;
+  }
+}

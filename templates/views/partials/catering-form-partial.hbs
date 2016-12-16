@@ -1,0 +1,57 @@
+<form action="/api/contact" method="post" class="js-form" role="form">
+  <div class="row">
+    <div class="col-sm-6">
+
+      <div class="form-group">
+        <label for="name">First &amp; Last Name*</label>
+        <input name="name" type="text" class="form-control" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email address*</label>
+        <input name="email" type="email" class="form-control" id="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number* </label>
+        <input name="phone" type="text" class="form-control" id="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="company">Company</label>
+        <input name="company" type="text" class="form-control" id="company">
+      </div>
+      <div class="form-group">
+        <label for="date">Date*</label>
+        <input name="date" type="date" class="form-control" id="date" required>
+      </div>
+    </div>
+
+  	<div class="col-sm-6">
+  		<div class="form-group">
+  			<label for="startTime">Start Time*</label>
+  			<input name="startTime" type="time" class="form-control" id="startTime" required>
+  		</div>
+  		<div class="form-group">
+  			<label for="endTime">End Time*</label>
+  			<input name="endTime" type="time" class="form-control" id="endTime" required>
+  		</div>
+  		<div class="form-group">
+  			<label for="guests">Number of Guests*</label>
+  			<input name="numGuests" type="number" min="0" class="form-control" id="guests" required>
+  		</div>
+  		<div class="form-group">
+  			<label for="notes">Additional Notes</label>
+            <textarea style="height: 138px" name="notes" rows='6' class="form-control" id="notes"></textarea>
+  		</div>
+
+  	</div>
+  </div>
+
+	<button type="submit" class="Button js-submitBtn">Inquire</button>
+	<div style="margin: 30px 10px">
+		<div class="alert alert-warning u-isHidden js-formError" role="alert">
+			<strong>Uh Oh!</strong> Something went wrong. Please try again.
+		</div>
+		<div class="alert alert-success u-isHidden js-formSuccess" role="alert">
+			<strong>Perfect!</strong> We'll be reaching out to you soon.
+		</div>
+	</div>
+</form>

@@ -1,0 +1,18 @@
+.Hours-container {
+	max-width : 330px;
+	margin    : auto;
+}
+
+.Hours-item {
+	width           : 100%;
+  display         : flex;
+  justify-content : space-between;
+	margin-bottom   : 15px;
+}
+
+.Hour-text {
+  text-transform : uppercase;
+  font-weight    : bold;
+
+  @include font-smoothing(on);
+}

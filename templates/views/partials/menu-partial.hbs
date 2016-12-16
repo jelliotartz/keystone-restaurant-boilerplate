@@ -1,0 +1,37 @@
+<a name="menu"></a>
+{{> global/bg-image-partial class="Section-bg--menu" image=config.menuImage}}
+<section
+  class="Menu Section Section-bg Section-bg--menu">
+    <div class="Menu-container">
+        {{> global/section-header-partial title=config.menuHeader}}
+        {{#if config.menuText}}
+          <p class="Section-lead">{{config.menuText}}</p>
+        {{/if}}
+        {{#each menus}}
+        <div class="embed-container ratio-menu">
+          <iframe src="//docs.google.com/gview?url={{{cloudinaryUrl pdf fetch_format='pdf'}}}&embedded=true"></iframe>
+        </div>
+        {{/each}}
+        <!-- <ul class="MenuList">
+            {{#each menus}}
+                <li class="MenuList-item">
+                    <a
+                      title="Menu of {{name}}"
+                      href="{{{cloudinaryUrl pdf fetch_format='pdf'}}}"
+                      class="MenuList-link">
+                      <figure class="MenuList-figure">
+                          <figcaption class="MenuList-caption">
+                            <span>{{name}}</span>
+                          </figcaption>
+                          <img
+                            class="MenuList-image img-responsive"
+                            src="{{cloudinaryUrl image width=288 height=288 quality='80' fetch_format='auto' crop='fill' gravity='center'}}"
+                            alt="Image of {{name}}"
+                          />
+                      </figure>
+                    </a>
+                </li>
+            {{/each}}
+        </ul> -->
+    </div>
+</section>

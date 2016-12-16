@@ -1,0 +1,19 @@
+<div class="Logo">
+	{{#if config.logo.public_id}}
+		<img
+      width="400"
+      height="350"
+			class="img-responsive center-block"
+			src="{{{cloudinaryUrl config.logo width='400' quality='80' }}}"
+			alt="{{config.name}}"
+		/>
+	{{else}}
+		<img
+      width="400"
+      height="350"
+			class="img-responsive center-block"
+			src="/images/logo.svg"
+			alt="{{config.name}}"
+		/>
+	{{/if}}
+</div>

@@ -1,0 +1,12 @@
+{{> global/bg-image-partial class="Section-bg--hero" image=config.heroImage}}
+<section
+  id="top"
+  class="Hero Section-bg Section-bg--hero">
+	  <div class="Hero-logo">
+      {{> global/logo-partial}}
+	  </div>
+	  <div class="Hero-contact">
+        {{config.address.street1}} &#8226; {{config.address.suburb}}, {{config.address.state}} {{config.address.postcode}} &#8226; <a href="tel:{{config.phone}}" title='Barn & Co Phone Number'>{{config.phone}}</a>
+  	</div>
+    {{> global/down-arrow-partial}}
+</section>

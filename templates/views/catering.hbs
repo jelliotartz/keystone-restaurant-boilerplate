@@ -1,0 +1,18 @@
+{{!< default}}
+{{> navigation-partial}}
+<a name="catering"></a>
+{{> global/bg-image-partial class="Section-bg--aboutUs" image=config.aboutUsImage}}
+<section
+  class="Section Section--page Section-bg Section-bg--aboutUs">
+  <div class="container">
+    {{> global/section-header-partial title=page.pageTitle}}
+    <div class='embed-container'>
+      <iframe src='http://docs.google.com/gview?url={{cloudinaryUrl page.cateringMenu fetch_format='pdf' width='700'}}&embedded=true' style='border:0'>
+      </iframe>
+    </div>
+    <br/>
+    <br/>
+    {{> catering-form-partial}}
+  </div>
+</section>
+{{> footer-partial}}

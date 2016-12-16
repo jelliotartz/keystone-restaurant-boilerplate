@@ -1,0 +1,67 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background     : $globalBgColor;
+  color          : $globalColor;
+  font-family    : $globalFontFamily;
+  font-weight    : $generalFontWeight;
+  font-size      : $globalFontSize;
+  letter-spacing : $globalLetterSpacing;
+  line-height    : $globalLineHeight;
+  
+  a {
+    color: $globalLinkColor;
+    &:hover,
+    &:active,
+    &:focus {
+      color: $globalLinkHoverColor;
+    }
+  }
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+}
+.embed-container iframe, .embed-container object, .embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.JoyButton,
+.btn-primary {
+	display         : block;
+	width           : 95%;
+	margin          : 30px auto 0 auto;
+	background      : transparent;
+	border-radius   : 1px;
+    color           : $btnPrimaryColor;
+    font-family     : $btnPrimaryFontFamily;
+    font-size       : $btnPrimaryFontSize;
+    font-weight     : $btnPrimaryFontWeight;
+    border          : $btnPrimaryBorder;
+	text-transform  : uppercase;
+	padding         : 12px 0;
+	transition      : all 0.3s ease 0s;
+	text-decoration : none;
+	text-align      : center;
+	letter-spacing  : 3px;
+
+	&:hover {
+		text-decoration: none;
+		background: rgba(0, 0, 0, 0.50);
+		color: #fff;
+	}
+}

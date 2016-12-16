@@ -1,0 +1,37 @@
+<style type="text/css">
+    @media (min-width: 1500px) {
+      .{{class}} {
+         background-image: url({{cloudinaryUrl this.image width='1800' crop='fill' gravity='center' quality='70' fetch_format='auto' }});
+       }
+    }
+
+    @media (max-width: 1500px) {
+      .{{class}} {
+         background-image: url({{cloudinaryUrl this.image width='1500' crop='fill' gravity='center' quality='70' fetch_format='auto' }});
+       }
+    }
+
+    @media (max-width: 1200px) {
+      .{{class}} {
+         background-image: url({{cloudinaryUrl this.image width='1200' crop='fill' gravity='center' quality='70' fetch_format='auto' }});
+       }
+    }
+
+    @media (max-width: 768px) {
+      .{{class}} {
+       background-image: url({{cloudinaryUrl this.image width='768' crop='fill' gravity='center' quality='70' fetch_format='auto' }});
+       }
+    }
+
+    @media (max-width: 475px) {
+      .{{class}} {
+         background-image: url({{cloudinaryUrl this.image width='475' height='768' crop='fill' gravity='center' quality='70' fetch_format='auto' }});
+      }
+    }
+
+    @media (max-width: 320px) {
+      .{{class}} {
+         background-image: url({{cloudinaryUrl this.image width='320' height='568' crop='fill' gravity='center' quality='70' fetch_format='auto' }});
+       }
+    }
+</style>

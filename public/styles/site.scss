@@ -1,0 +1,31 @@
+@import "bootstrap/bootstrap";
+
+@import "config/h5bp";
+@import "config/normalize";
+@import "config/mixins";
+@import "mixins/responsive-container";
+
+@import "config/variables";
+@import "config/layout";
+
+@import "components/section";
+@import "components/hours";
+@import "components/gallery";
+@import "components/global-footer";
+
+@import "sections/hero";
+@import "sections/navigation";
+@import "sections/menu";
+@import "sections/private-events";
+@import "sections/about-us";
+
+.Address {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.ratio-menu {
+  font-size: 40px;
+  @include responsiveContainer(1150 / 700);
+}

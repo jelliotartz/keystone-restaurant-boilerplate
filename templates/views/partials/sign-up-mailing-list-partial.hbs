@@ -1,0 +1,12 @@
+<a name="contact-us"></a>
+{{> global/bg-image-partial class="Section-bg--mailingList" image=config.mailingListImage}}
+<section
+  class="Section Section-bg Section-bg--mailingList">
+  <div class="container text-center" style="max-width: 500px; margin: auto;">
+    {{> global/section-header-partial title=config.mailingListHeader}}
+    <p class="Section-lead">{{config.mailingListText}}</p>
+    <br />
+    <br />
+    {{> mailing-list-partial}}
+  </div>
+</section>

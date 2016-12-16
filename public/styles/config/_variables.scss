@@ -1,0 +1,65 @@
+$colorBrandMain: #895d25;
+$colorBrandSecondary: #3c2415;
+
+$colorAqua           : hsla(200, 18%, 46%, 0.4);
+$colorBlack          : #000;
+$colorLightGray      : #eee;
+$colorOffWhite       : #fafafa;
+$colorWhite          : #fff;
+$colorGrey           : #666666;
+$colorGreyBackground : #f0f0f0;
+
+$colorDarkBrown: hsl(32, 87%, 3%);
+
+$fontOpenSans : 'Open Sans', sans-serif;
+$fontRobotoSlab: 'Roboto Slab', serif;
+
+$globalBgColor: $colorBlack;
+$globalColor: $colorWhite;
+$globalLinkColor: $colorLightGray;
+$globalLinkHoverColor: $colorOffWhite;
+
+$globalInputBg: $colorDarkBrown;
+$globalInputBorder: $colorBlack;
+
+$globalFontFamily    : $fontRobotoSlab;
+$globalLetterSpacing : 1.5px;
+$globalFontWeight    : 400;
+$globalLineHeight    : 1.2;
+$globalFontSize      : 16px;
+
+$titleFontFamily: $fontOpenSans;
+$titleFontWeight: 700;
+$titleFontSize: 40px;
+$titleFontColor: $colorBrandMain;
+
+$titleFontFamily: $fontRobotoSlab;
+$titleFontSize: 34px;
+$titleFontWeight: normal;
+$titleFontColor: $colorWhite;
+
+$subtitleFontFamily: $fontOpenSans;
+$subtitleFontWeight: 400;
+
+$generalFontFamily: $fontOpenSans;
+$generalFontWeight: 300;
+$generalFontSize: 16px;
+$generalLineHeight: 1.2;
+
+$navFontFamily: $fontRobotoSlab;
+$navFontWeight: normal;
+$navFontSize: 18px;
+$navFontColor: $colorWhite;
+$navFontHoverColor: $colorBrandMain;
+$navLineHeight: 1.2;
+
+$navPadding: 14px 0;
+
+$navSpacing: 0 15px;
+
+$btnPrimaryBgColor: $colorDarkBrown;
+$btnPrimaryColor: $colorWhite;
+$btnPrimaryBorder: 1px solid $colorDarkBrown;
+$btnPrimaryFontWeight: 400;
+$btnPrimaryFontFamily: $fontRobotoSlab;
+$btnPrimaryFontSize: 15px;

@@ -1,0 +1,10 @@
+.GlobalFooter {
+	padding    : 30px 20px;
+	color      : $colorGrey;
+	background : $colorBlack;
+	text-align : center;
+
+	@media (max-width: 768px) {
+		padding: 20px;
+	}
+}

@@ -1,0 +1,50 @@
+.Property {
+
+}
+
+.Property-link {
+  &, &:hover {
+    text-decoration: none;
+  }
+}
+
+.Property-image {
+
+}
+
+.Property-caption {
+  padding: 20px;
+  background: $colorWhite;
+}
+
+.Property-details {
+  font-size: 13px;
+  color: #666;
+}
+
+.Property-heading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: #fff;
+  background-color: #a1a64a;
+  padding: 20px 10px;
+}
+
+.Property-button {
+  border-radius: 5px;
+  border: 1px solid #d6d5d5;
+  font-size: 12px;
+  padding: 7px;
+  color: #a1a64a;
+}
+
+.Property-price {
+  font-weight: 800;
+  font-size: 20px;
+  color: #a1a64a;
+}
+
+.Property-section {
+  background: $colorGreyBackground;
+}

@@ -1,0 +1,47 @@
+<script>
+  document.addEventListener('DOMContentLoaded', handleNavMenu)
+
+  function handleNavMenu () {
+    var isMenuOpen = false
+    var $nav = document.getElementsByClassName('Navigation')[0]
+    var $container = document.getElementsByClassName('Navigation-container')[0]
+    var $icon = document.getElementsByClassName('Navigation-icon')[0]
+
+    var closed = $container.className
+    var open = $container.className + '--open'
+
+    $icon.addEventListener('click', function (evt) {
+      evt.preventDefault()
+      isMenuOpen = !isMenuOpen
+      handleToggleClass(isMenuOpen, $container, open, closed)
+    })
+
+  }
+
+  function handleToggleClass(toggle, element, className, reset) {
+    if (toggle) {
+      element.className = element.className + " " + className
+    } else {
+      element.className = reset
+    }
+  }
+
+</script>
+<nav class="Navigation">
+	<ul class="Navigation-container">
+		{{#each navLinks}}
+			<li class="Navigation-item">
+				<a href="{{url}}" class="Navigation-link" title="{{label}}">
+          {{label}}
+        </a>
+			</li>
+		{{/each}}
+	</ul>
+	<img
+    class="Navigation-icon"
+    src="/images/navicon.svg"
+    width="56"
+    height="56"
+    alt="Navigation icon"
+  />
+</nav>

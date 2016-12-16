@@ -1,0 +1,12 @@
+<a name="contact-us"></a>
+<section
+  style="background-image: url({{cloudinaryUrl config.mailingListImage width='1600' quality='80'}})"
+  class="Section Section-bg">
+  <div class="container text-center" style="max-width: 500px; margin: auto;">
+    {{> global/section-header-partial title=config.mailingListHeader}}
+    <p class="Section-lead">{{config.mailingListText}}</p>
+    <br />
+    <br />
+    {{> mailing-list-partial}}
+  </div>
+</section>
