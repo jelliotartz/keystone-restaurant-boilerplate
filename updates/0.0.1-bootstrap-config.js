@@ -20,14 +20,6 @@ exports.create = {
       //   label: 'Sponsorships',
       //   url: '/sponsorships'
       // },
-      {
-        label: 'Order Online',
-        url: '' // https://www.grubhub.com/restaurant/barn-and-company-950-w-wrightwood-ave-chicago/298103
-      },
-      {
-        label: 'Reserve a table',
-        url: '' // http://www.opentable.com/barn-and-company-reservations-chicago?restref=115276
-      }
     ],
     Configuration: [
       {
@@ -40,16 +32,16 @@ exports.create = {
           postcode: ''
         },
         phone: '',
-        email: '', // events@barnandcompany.com
+        email: '', //
         menuHeader: '', // Menu
         aboutUsHeader: '', // About Us
         galleryHeader: '', // Gallery
-        experienceVideoUrl: '', // https://www.youtube.com/embed/UA6tdrdXeOg
+        experienceVideoUrl: '',
         privateEventsHeader: '', // Private Events
         privateEventsText: 'lorem ipsum...',
         mailingListHeader: 'lorem ipsum...',
         mailingListText: 'lorem ipsum...',
-        mailchimpUrl: '', // https://BarnandCompany.us8.list-manage.com/subscribe/post?u=c92a0ed74771bd546c02471bb&amp;id=2db31091e6
+        mailchimpUrl: '',
         aboutUsText: 'lorem ipsum...'
       }
     ],

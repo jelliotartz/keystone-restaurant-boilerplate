@@ -121,25 +121,12 @@ When you want to deploy to numerous environments, you use environment variables.
 
 Instead of fumbling around and making sure you've got the right keys set up, you can use a `.env` file to load those keys for you automagically. See `dotenv` on Google / Github.
 
-Create a `.env` file and paste the following:
-
-```bash
-COOKIE_SECRET=f590092a5e57c127d28cc71d3158e490a01d07bcffe65ac2f61dc054877442a8b60fdb7b814ccb57b87b6b766c800edf1e63e264a269f5484b4a598c5bc65f4a
-CLOUDINARY_URL=cloudinary://333779167276662:_8jbSi9FB3sWYrfimcl8VKh34rI@keystone-demo
-MANDRILL_API_KEY=NY8RRKyv1Bure9bdP8-TOQ
-```
-
 
 ## Starting the project
 
 `npm start` from the root directory
 
 It will start a node server on `localhost:3000`. You can open up Chrome and navigate to see the starter project.
-
-You can login to the project: [http://localhost:3000/keystone](http://localhost:3000/keystone)
-
-Username: user@keystonejs.com
-Password: admin
 
 ## Project Structure
 
